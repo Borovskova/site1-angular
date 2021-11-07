@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row row-1">
+        <div class="col-lg-6 col-md-6  first-section-left">
+            <h1>Get the right plan for future product.</h1>
+        </div>
+        <div class="col-lg-6 col-md-6 first-section-right">
+            <button class="btn left-button">Yearly</button>
+            <button class="btn right-button">Monthly</button>
+        </div>
+    </div>
+    <div class="row row-2">
+        <div class="col second-section">
+            <div class="card text-dark {{card.card_class}} mb-3" style="max-width: 18rem;" *ngFor="let card of cards">
+                <p class="p-name">{{card.name}}</p>
+                <div class="card-body">
+                    <img src="{{'./assets/images/' + card.title}}" alt="">
+                    <p class="card-text">{{card.description[0]}}</p>
+                    <p>{{card.description[1]}}</p>
+                    <p>{{card.description[2]}}</p>
+                    <button class="btn">{{card.buttonText}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

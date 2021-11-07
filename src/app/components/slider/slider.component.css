@@ -1,0 +1,88 @@
+.img-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    object-fit: contain;
+    max-width: 114px;
+    max-height: 64px;
+}
+
+.col {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+h3 {
+    font-family: DM Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.7503160238265991px;
+    text-align: center;
+    padding-top: 20px;
+    color: rgba(25, 25, 27, 1);
+}
+
+p {
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.5002105832099915px;
+    text-align: center;
+    color: rgba(105, 104, 113, 1);
+    padding-top: 20px;
+}
+
+button {
+    font-size: 15px;
+}
+
+#controls {
+    position: relative;
+    width: 100%;
+}
+
+.prev-button {
+    position: absolute;
+    top: 30px;
+    left: 45%;
+}
+
+.next-button {
+    position: absolute;
+    top: 30px;
+    left: 52%;
+}
+
+
+/* @media */
+
+@media screen and (max-width: 992px) {
+    .prev-button {
+        left: 44%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .next-button {
+        left: 52%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .prev-button {
+        left: 42%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .next-button {
+        left: 52%;
+    }
+}

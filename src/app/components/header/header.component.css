@@ -1,0 +1,40 @@
+.navbar {
+    padding-top: 30px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: center;
+}
+
+.nav-item {
+    padding-right: 49px;
+}
+.nav-link{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.4689474105834961px;
+    text-align: left;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    text-decoration: underline rgba(84, 84, 212, 1) 2px;
+    text-underline-offset: 10px;
+}
+
+.btn-header {
+    background: rgba(255, 113, 67, 1);
+    height: 60px;
+    width: 211px;
+    border-radius: 10px;
+    color: white;
+    font-family: DM Sans;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.5314737558364868px;
+    text-align: center;
+}

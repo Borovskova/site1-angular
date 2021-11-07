@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-left">
+            <h1>Grow your subscription business</h1>
+            <p>Outcome-centered products that reduce churn, optimize pricing, and grow your subscription business
+                end-to-end.</p>        
+                <button class="btn">Get Started</button>
+                <img style="padding-left: 40px; min-height: 60px;
+                min-width: 60px;" src="./assets/images/DownArrow.png" alt="">        
+        </div>
+        <div class="col-lg-6  col-md-12 col-sm-12  col-right">
+            <img src="./assets/images/Hero3D.png" alt="">
+        </div>
+    </div>
+    <div class="flexbox">
+        <div class="wrap" *ngFor="let img of images">
+            <img src="{{'./assets/images/' + img.name}}" alt="">
+        </div>
+    </div>
+</div>
