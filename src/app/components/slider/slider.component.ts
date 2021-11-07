@@ -75,7 +75,7 @@ export class SliderComponent implements OnInit {
       )
       .subscribe(next => {
         this.sliderLazy.domReady.next();
-        console.log('image loaded', next);
+        //console.log('image loaded', next);
       });
   }
   onImgLoadSuccess() {

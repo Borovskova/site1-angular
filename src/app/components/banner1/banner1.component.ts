@@ -16,9 +16,7 @@ export class Banner1Component implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.images[0].name);
-    
+  ngOnInit(): void { 
   }
 
 }
