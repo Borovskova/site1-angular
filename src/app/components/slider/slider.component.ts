@@ -48,14 +48,17 @@ export class SliderComponent implements OnInit {
         300: {
           items: 1
         },
+        400: {
+          items: 1
+        },
         500: {
           items: 2
         },
         600: {
-          items: 3
+          items: 2
         },
         768: {
-          items: 3
+          items: 2
         },
         992: {
           items: 3

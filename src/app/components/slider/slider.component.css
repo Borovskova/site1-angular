@@ -86,3 +86,14 @@ button {
         left: 52%;
     }
 }
+@media screen and (max-width: 450px) {
+    .prev-button {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .next-button {
+        left: 55%;
+    }
+}
