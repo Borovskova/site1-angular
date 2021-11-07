@@ -1,5 +1,8 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { NgxTinySliderComponent, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
+import { NgxTinySliderComponent, NgxTinySliderInstanceInterface, NgxTinySliderService, NgxTinySliderSettingsInterface } from 'ngx-tiny-slider';
+import { BehaviorSubject } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 
 
 @Component({
@@ -8,6 +11,7 @@ import { NgxTinySliderComponent, NgxTinySliderSettingsInterface } from 'ngx-tiny
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit {
+
   cards: any = [
     { title: 'Benchmarks', imgName: 'Icon001.png', description: 'See how you stack up against comparable companies in similar stages.' },
     { title: 'Pricing Audit', imgName: 'Icon002.png', description: 'Benchmark the health of your monetization and pricing strategy.' },
@@ -18,25 +22,22 @@ export class SliderComponent implements OnInit {
   ];
 
   tinySliderConfig: NgxTinySliderSettingsInterface;
+  imageLoadingProcess: BehaviorSubject<number> = new BehaviorSubject(0);
 
-  // @ViewChildren('slideList') slideList: QueryList<any>;
-  // @ViewChild('ngxSlider')
-  // private ngxSlider: ElementRef<NgxTinySliderComponent>;
+  @ViewChildren('slideList') slideList: QueryList<any>;
+  @ViewChild('ngxSlider', { static: false }) sliderLazy: NgxTinySliderInstanceInterface;
+  private ngxSlider: ElementRef<NgxTinySliderComponent>;
 
 
 
-  constructor() { }
+  constructor(private ngxTinySliderService: NgxTinySliderService) { }
 
-  // ngAfterViewInit() {
-  //   this.ngxSlider.nativeElement.domReady.next()
-  //   //this.slideList.changes.subscribe(() => this.ngxSlider.nativeElement.domReady.next());
-  // }
 
   ngOnInit() {
     this.tinySliderConfig = {
+      waitForDom: true,
       items: 3,
       nav: false,
-      //waitForDom: true, 
       arrowKeys: true,
       autoWidth: false,
       gutter: 10,
@@ -61,6 +62,21 @@ export class SliderComponent implements OnInit {
         }
       }
     };
+    this.trackImageLoading();
   }
 
+  trackImageLoading() {
+    this.imageLoadingProcess
+      .pipe(
+        filter((count: number) => count === this.cards.length)
+      )
+      .subscribe(next => {
+        this.sliderLazy.domReady.next();
+        console.log('image loaded', next);
+      });
+  }
+  onImgLoadSuccess() {
+    const incLoadedCount = this.imageLoadingProcess.getValue() + 1;
+    this.imageLoadingProcess.next(incLoadedCount);
+  }
 }

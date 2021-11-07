@@ -3,55 +3,55 @@
         <div class="col">
             <ngx-tiny-slider [config]="tinySliderConfig" #ngxSlider>
                 <ng-container class="items">
-                    <!-- <div class="item" *ngFor="let card of cards"  #slideList>
-                         <div class="img-wrap">
-                        <img src="{{'./assets/images/' + card.imgName}}" alt="">
+                    <div class="item" *ngFor="let card of cards" #slideList>
+                        <div class="img-wrap">
+                            <img src="{{'./assets/images/' + card.imgName}}" (load)="onImgLoadSuccess()" alt="">
                         </div>
                         <h3>{{card.title}}</h3>
                         <p>{{card.description}}</p>
+                    </div>
+                    <!-- <div class="item">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Icon001.png" alt="">
+                        </div>
+                        <h3>Title</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Icon002.png" alt="">
+                        </div>
+                        <h3>Title</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Icon003.png" alt="">
+                        </div>
+                        <h3>Title</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Icon001.png" alt="">
+                        </div>
+                        <h3>Title</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Icon002.png" alt="">
+                        </div>
+                        <h3>Title</h3>
+                        <p>description</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Icon003.png" alt="">
+                        </div>
+                        <h3>Title</h3>
+                        <p>description</p>
                     </div> -->
-                    <div class="item">
-                        <div class="img-wrap">
-                            <img src="./assets/images/Icon001.png" alt="">
-                        </div>
-                        <h3>Title</h3>
-                        <p>description</p>
-                    </div>
-                    <div class="item">
-                        <div class="img-wrap">
-                            <img src="./assets/images/Icon002.png" alt="">
-                        </div>
-                        <h3>Title</h3>
-                        <p>description</p>
-                    </div>
-                    <div class="item">
-                        <div class="img-wrap">
-                            <img src="./assets/images/Icon003.png" alt="">
-                        </div>
-                        <h3>Title</h3>
-                        <p>description</p>
-                    </div>
-                    <div class="item">
-                        <div class="img-wrap">
-                            <img src="./assets/images/Icon001.png" alt="">
-                        </div>
-                        <h3>Title</h3>
-                        <p>description</p>
-                    </div>
-                    <div class="item">
-                        <div class="img-wrap">
-                            <img src="./assets/images/Icon002.png" alt="">
-                        </div>
-                        <h3>Title</h3>
-                        <p>description</p>
-                    </div>
-                    <div class="item">
-                        <div class="img-wrap">
-                            <img src="./assets/images/Icon003.png" alt="">
-                        </div>
-                        <h3>Title</h3>
-                        <p>description</p>
-                    </div>
                 </ng-container>
             </ngx-tiny-slider>
             <div id="controls">
