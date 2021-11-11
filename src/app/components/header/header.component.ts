@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,10 +9,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  isActive: string = 'home';
 
-
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
+  }
+
+  scrollFn(el: HTMLElement, name: string) {
+    el.scrollIntoView({ behavior: 'smooth' });
+    this.isActive = name;
   }
 }

@@ -1,7 +1,7 @@
-
 .navbar {
     padding-top: 30px;
 }
+
 
 .navbar-expand-lg .navbar-collapse {
     justify-content: center;
@@ -10,7 +10,8 @@
 .nav-item {
     padding-right: 49px;
 }
-.nav-link{
+
+.nav-link {
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
     font-style: normal;
@@ -18,7 +19,9 @@
     line-height: 20px;
     letter-spacing: -0.4689474105834961px;
     text-align: left;
+    cursor: pointer;
 }
+
 
 .navbar-light .navbar-nav .nav-link.active {
     text-decoration: underline rgba(84, 84, 212, 1) 2px;
@@ -38,4 +41,44 @@
     line-height: 22px;
     letter-spacing: -0.5314737558364868px;
     text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .btn-header {
+        height: 50px;
+        width: 150px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .container-fluid {
+        position: relative;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        z-index: 3;
+        background-color: white;
+    }
+
+    .navbar-collapse .navbar-nav .nav-link {
+        text-align: center;
+    }
+
+    .navbar-light .navbar-toggler {
+        position: absolute;
+        left: 44%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-light .navbar-toggler {
+        left: 42%;
+    }
+
+    .navbar-brand img {
+        max-width: 150px;
+    }
 }

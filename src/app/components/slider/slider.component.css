@@ -12,7 +12,7 @@ img {
 
 .col {
     padding-top: 75px;
-    padding-bottom: 75px;
+    padding-bottom: 125px;
 }
 
 h3 {
@@ -64,24 +64,20 @@ button {
 /* @media */
 
 @media screen and (max-width: 992px) {
+    .col{
+        padding-top: 10px;
+    }
     .prev-button {
         left: 44%;
     }
-}
-
-@media screen and (max-width: 992px) {
     .next-button {
         left: 52%;
     }
 }
-
 @media screen and (max-width: 768px) {
     .prev-button {
         left: 42%;
     }
-}
-
-@media screen and (max-width: 768px) {
     .next-button {
         left: 52%;
     }
@@ -90,9 +86,6 @@ button {
     .prev-button {
         left: 40%;
     }
-}
-
-@media screen and (max-width: 450px) {
     .next-button {
         left: 55%;
     }
