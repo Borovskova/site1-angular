@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/83124472/141285620-f9b4f91f-1ec0-42c7-a7b9-9d3cf0656aeb.png)
+
+
 # BusinessSite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
