@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { Banner1Component } from './components/banner1/banner1.component';
@@ -23,7 +23,6 @@ import { Banner4Component } from './components/banner4/banner4.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgxTinySliderModule
   ],
   providers: [],

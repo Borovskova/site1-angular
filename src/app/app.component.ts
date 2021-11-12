@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'business-site';
+
+
+  public onScroll(elemID: any) {
+    let element = document.querySelector(elemID)
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
 }
